@@ -1,17 +1,23 @@
 <template>
   <div class="postcard-form">
     <h2>This is where the form will live</h2>
-    <textarea class="postcard-text" v-model="msg">Enter Your Text:</textarea>
+    <textarea class="postcard-text">Enter Your Text:</textarea>
   </div>
 </template>
+
+<!--  v-model="msg"  used in the textarea tag, but that broke it-->
+<!-- <input :value="value" @input="$emit('input', $event.target.value)"> 
+the above could be using input instead of textarea -->
+
+
 
 <script>
 export default {
   name: 'PostCardForm',
   props: {
     msg: {
-      type: 'text',
-      value: 'Enter message',
+      type: String,
+      default: 'Enter message',
       required: true
     }
   }

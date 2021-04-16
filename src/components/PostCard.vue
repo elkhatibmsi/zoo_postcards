@@ -8,7 +8,7 @@
 export default {
   name: 'PostCard',
   props: {
-    msg: String
+    msg: String   //How to set a default string? "Enter text/msg here" or something
   }
 }
 </script>

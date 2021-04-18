@@ -1,15 +1,14 @@
 <template>
   <div class="postcard-form">
     <h2>This is where the form will live</h2>
-    <textarea class="postcard-text">Enter Your Text:</textarea>
+    <input class="postcard-text" :msg="msg" placeholder="Enter your message..." @input="$emit('placeholder', msg)">
   </div>
+  <p class="message-output">
+      Your message is: {{ msg }}
+  </p>
 </template>
 
-<!--  v-model="msg"  used in the textarea tag, but that broke it-->
-<!-- <input :value="value" @input="$emit('input', $event.target.value)"> 
-the above could be using input instead of textarea -->
-
-
+<!--How to emit msg to PostCard? Does PostCardForm need it at all?-->
 
 <script>
 export default {
@@ -17,7 +16,6 @@ export default {
   props: {
     msg: {
       type: String,
-      default: 'Enter message',
       required: true
     }
   }

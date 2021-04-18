@@ -8,7 +8,7 @@
 export default {
   name: 'PostCard',
   props: {
-    msg: String   //How to set a default string? "Enter text/msg here" or something
+    msg: String   //do they both need msg prop? This and PostCardForm? Or just one?
   }
 }
 </script>
